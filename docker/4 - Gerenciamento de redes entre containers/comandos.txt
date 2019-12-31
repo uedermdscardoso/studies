@@ -1,0 +1,38 @@
+docker network ls
+--> lista os network disponíveis
+
+docker network inspect bridge
+--> inspeciona informações do network bridge
+
+docker network create --driver bridge teste
+--> Criar um novo network create --driver bridge teste
+
+//executa container
+docker run --network teste -itd --name container1 busybox
+--> busybox é uma imagem
+--> -itd    executa em background
+--> Executa um novo container, inserindo o networl adapter chamado  teste
+
+docker attach container1
+/# ifconfig    (tem informações de rede do container1)
+/# ping <ip-da-rede>   
+/# "Ctrl p" e "Ctrl q" para sair
+
+--> É criado uma entrada referenciando o ip com o id do container em /etc/hosts (execute o comando "cat /etc/hosts" para listar as entradas) 
+--> O ideal é o usar o name e não o id do container
+
+docker network connect teste container1
+--> teste é o network
+--> Conecta um container já em execução a uma network
+
+docker run --network teste -itd --name container4 --net-alias c4 busybox
+--> Dá um apelido ao ip
+docker attach container4
+(executando dentro do container4)
+/# ping c4
+
+docker network connect --alias teste container1
+--> Conecta um container já em execução a uma network, definindo um apelido dentro daquela rede
+
+
+

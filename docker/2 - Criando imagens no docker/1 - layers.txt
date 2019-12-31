@@ -1,0 +1,7 @@
+Uma das grades vantagens em utilizar o Docker é a forma como ele gerencia as imagens, onde é possível reutilizar partes de uma imagem que já existe e criar novas imagens a partir delas. Arquietura é mostrada na imagem funcionamento-layers.png
+
+Ao criar uma imagem, são criadas várias comadas que são, e ao criar uma nova imagem derivada ao invés de duplicar toda a imagem novamente, ele cria uma camada diferencial ao topo da imagem anterior e assim economiza o espaço em disco.
+
+Cada layer de imagem é identitificada a partir de um hash único e o conteúdo da imagem nao pode ser modificado depois que foi criado. Quando os container são executados, uma camada de letirua e escrita são criados onde é possível guardar os dados manipulados temporariamente.
+
+Quando é removido, toda alteração que ocorreu dentro do container é descartada. Mas é possível salvar esse diferencial de arquivos modificados e criar uma imagem derivada, persistindo as alterações.

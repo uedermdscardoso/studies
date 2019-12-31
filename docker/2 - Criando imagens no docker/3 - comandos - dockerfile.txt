@@ -1,0 +1,33 @@
+dockerfile tem o objetivo de automatizar a criação de imagens
+
+docker build -t [name-image]
+docker build -t teste/nginx .    (. é localiação do dockerfile)
+--> Construir um container que vai servir um servidor web simples
+--> cria uma imagem com build
+
+--> usar && \ apt-get clean para não gerar várias layers
+--> O ideal é juntar os comando em um único RUN no arquivo dockerfile com '\' que separa entre eles (que faça sentido para juntar)
+
+docker run --rm -it teste/nginx bash
+--> informar bash para executar o bash a partir do container e não executar o comando padrão do container
+--> destrói o container
+
+//mapeamento de porta entre dockerfile e o container
+docker run -p 80:8080 --rm -it teste/nginx
+--> executa na porta 80
+
+curl localhost:80
+--> acessar o localhost e retorna o resultado
+
+comando Volume
+--> Com volume, pode definir diretórios dentro do container que os dados precisam ser persistidos independente se o container continue ser executados ou não.
+
+//Informa o diretório que quer mapear
+//Docker irá fazer mapeamento em tempo real
+docker run -p 80:8080 -v ~/Home/html:/usr/share/nginx/html --rm -it teste/nginx
+
+ENTRYPOINT ['nginx']
+--> informa que o container específico foi feito para rodar o nginx e não conseguiria acessar o bash por exemplo. 
+
+CMD["-g", "daemon off;"] do arquivo dockerfile
+--> permite passar manualmente

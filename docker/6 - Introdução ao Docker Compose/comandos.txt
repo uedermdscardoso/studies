@@ -1,0 +1,34 @@
+O objetivo do docker compose é automatizar a criação de containers
+
+
+Precisa de arquivos: 
+docker-compose.yml 
+dockerfile
+
+O arquivo docker-compose.yml define quais containers e imagens que são utilizadas. Também configuração do volume
+
+O arquivo dockerfile irá criar um container a partir do hub
+
+docker-compose build
+//Todos os containers serão feito de uma só vez o build
+
+docker-compose run web rails new . --force --database=postgresql --skip-bundle
+//Será executado dentro do container
+
+//Dando permissão ao usuário
+sudo chown -R $USER 
+
+//Configuração do database
+cp ../database.yml config/database.yml
+cat config/database.yml
+
+docker-compose run web rake db:create
+//Criando setup do banco
+//Irá criar toda a estrutura do banco de dados, tabelas para rodar a aplicação
+
+docker-compose up
+
+docker container ls -a
+//Lista todos os containers que foram parados
+
+

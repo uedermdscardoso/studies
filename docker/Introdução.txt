@@ -1,0 +1,13 @@
+O docker reduz barreiras entre os times de desenvolvimento e de
+operações, aproximando as suas rotinas de forma a aumentar
+a colaboração entre os dois times. Assim, promovendo uma cultura focada em DevOps.
+
+Docker compõe um conjunto de ferramentas que é utilizado para gerenciar um container.
+O container pode ser entendido como uma forma de virtualização
+no nível do sistema operacional que possibilita executar múltiplos
+sistemas isolados em um único sistema real, compartilhando os recursos do kernel para economizar recursos do kernel como disco, memória RAM e CPU.
+Esse isolamento possibilita preparar um ambiente portável e padronizado para executar as nossas aplicações, garantindo que elas possam ser executadas em qualquer lugar, de qualquer sistema que tenha suporte aos containers. Por ser simples a execução delas, são escaladas facilmente em inúmeros servidores e depois eliminadas conforme necessidade, pois os containers tem como propriedade serem descartáveis.
+
+A imagem "containers-vs-vm.png" mostrar duas arquiteturas. A imagem à esquerda mostra uma arquitetura estrutura em containers executando o docker  e à direita representa a máquina virtual (VM) que é uma representação completa de um sistema real com kernel e sistemas independentes (Não há compartilhamento de recursos e isso pode resultar em um desperdício de recursos).
+Os containers isolam e VM não.
+

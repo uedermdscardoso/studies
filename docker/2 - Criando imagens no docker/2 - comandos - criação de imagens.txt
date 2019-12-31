@@ -1,0 +1,68 @@
+docker images
+--> lista imagens
+
+docker pull ubuntu:16.10
+
+docker run -it ubuntu:16.10
+--> -it = interativo
+--> criando novo container a partir do ubuntu:16.10
+
+--> executando dentro do container
+apt-get update
+aget install htop     (htop para monitoramento)
+htop
+
+--> fora do container 
+docker ps -a    (os containers que estão parados)
+docker commit [id-container]     (criar uma nova imagem)
+
+docker run -it [id-container]   (entra no container)
+
+docker run -it ubuntu:16.10    (entrando no container ubuntu puro)
+exit    (sair do container)
+
+docker commit -m='include htop' -a='Autor' [id-container] teste/ubuntu:v2   
+--> (é um nome amigável)
+--> v2 é tag
+
+docker history [nome-amigável or hash]
+docker history 
+--> lista todas as layers que foram utilizadas
+
+docker ps -aq
+--> só mostra o id das imagens
+
+docker ps -aq -n 1
+--> retorna o último container que foi executado
+
+docker start [id-container]
+--> inicia o container
+
+docker stop [id-container]
+--> para o container
+
+docker exec -it [id-container] apt-get install vim
+--> instalar vim dentro do container com o comando exec
+
+------------------------
+
+--> Criando novo container a partir da imagem goofy_wiles 
+docker commit -a='Autor' -m='Install vim' goofy_wiles teste/ubuntu:v3
+--> teste/ubuntu:v3 é nome amigável
+
+docker images
+--> ver a imagem que criou
+
+docker run -it --name ub teste/ubuntu:v3
+-->  --name ub é apelido informado
+--> aparecerá na coluna name
+
+docker start ub   (inicia o container)
+
+docker container prune 
+--> remove todos os containers parados e libera o espaço em disco
+
+docker exec -it ub vim
+--> executa o vim dentro do container com exec
+
+ 

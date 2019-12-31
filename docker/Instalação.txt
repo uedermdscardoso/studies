@@ -1,0 +1,10 @@
+For Ubuntu OS
+https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
+Part 'Install using the repository' and 'SET UP THE REPOSITORY'
+
+For Window OS
+O docker roda dentro de uma máquina virtual que contém sistema operacional de distribuição linux para executar os containers.
+
+Windows 10 Pro (Suporte à virtualização)
+--> Habilitar Hyper-V e Containers através do painel de controle e no botão 'Ativar ou desativar recursos ...' 

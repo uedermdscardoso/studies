@@ -1,0 +1,4 @@
+O Docker Store era conhecido, anteriormente, como Docker Hub onde é o local que você irá encontrar imagens pré-configuradas para utilizar em aplicações sem precisar contruir tudo do zero. 
+
+Pode acessar as imagens por meio deste link que pode estar baixando: 
+https://hub.docker.com/

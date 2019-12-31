@@ -1,0 +1,29 @@
+Arquivo Dockerfile
+  FROM ubuntu
+  RUN mkdir /myvol
+  RUN echo "hello world" > /myvol/potato
+  VOLUME /myvol
+
+docker volume ls
+--> lista todos os volumes disponíveis no sistema
+
+docker volume remove $(docker volume ls -q | head -n 1)
+--> remove o último volume criado
+
+docker run -v $(docker volume ls -q | head -n 1):/myvol teste/volume ls /myvol
+--> :/myvol mapeamento com o destino
+--> myvol -- myvolume
+--> Mapeia o último volume com um novo ocntainer
+
+docker volume create teste
+--> Cria um novo volume nomeado
+
+docker run -v teste:/myvol teste/volume ls /myvol
+--> ls /myvol = inspeciona
+--> Cria um container anexando o volume nomeado teste
+
+docker run -v $PWD/myvol:/myvol teste/volume ls /myvol
+--> $PWD é o caminho absoluto
+
+docker volume inspect teste
+--> lista as informações do volume nomeado teste

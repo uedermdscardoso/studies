@@ -1,0 +1,71 @@
+As imagens são usadas para executar os containers. São responsáveis por definir tipos de aplicação que o container vai suportar
+
+docker images 
+--> lista as imagens disponíveis no sistema
+
+--------------------------------
+
+docker images -q
+--> retorna apenas o id das imagens
+
+--------------------------------
+
+docker pull ubuntu
+docker pull ubuntu:16.10
+--> baixa uma imagem, podendendo definir uma versão(tag) específica
+
+--------------------------------
+
+docker search php
+--> procura por uma imagem específica
+
+--------------------------------
+
+docker run ubuntu
+docker run ubuntu echo $User (retorna usuário dentro do container após executar a imagem)
+--> executa um container a partir de uma imagem
+
+--------------------------------
+
+docker run -it alpine /bin/bash    (Navega como se fosse um ssh)
+docker run -it alpine sh
+--> -itd executa em background
+--> É feito o download se não houver alpine baixado 
+
+--------------------------------
+
+docker ps     (containers em execução)
+docker ps -a
+--> analisa os containers em execução no sistema
+
+--------------------------------
+
+docker ps -qa
+--> A opção 'q' retorna somente o código dos containers
+
+--------------------------------
+
+docker run ubuntu -it bash
+--> Executa um container permitindo a sua interação com o console do container (-it)
+
+--------------------------------
+
+docker stop [id-image]   (para o container)
+docker stop $(docker ps)
+--> Para a execução de todos os containers
+
+--------------------------------
+
+docker rm [id-image]   (limpa especificamente)
+--> Remove um container específico
+
+---------------------------
+
+docker rm $(docker ps -qa)
+--> q só lista os ids
+--> a - all
+--> Remove todos os containers no sistema que não estão sendo executados
+
+docker rmi [id-image]   (limpa especificamente)
+docker rmi $(docker images -q)
+--> remove uma lista de imagens no sistema 

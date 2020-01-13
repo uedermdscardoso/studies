@@ -1,0 +1,53 @@
+Flutter - Primeiros passos
+
+No Windows 
+
+1° Baixar o git no seguinte link " https://git-scm.com/download/win"
+
+2° Baixar o flutter no seguinte link "https://flutter.io/setup-windows/"
+
+3° Recomenda-se extrair o arquivo .zip do Flutter SDK no caminho C:/src/Flutter
+
+4° Execute o arquivo flutter_console.bat para que o console do Flutter seja inicializado e podemos rodar os comandos. 
+
+5° Ou colocar o Flutter CLI diretamente no path sem precisar sempre abrir o Flutter Console de modo manual.
+--> Painel de Controle > Contas de Usuário > Contas de Usuário > Variáveis de ambiente
+--> Procure a variável chamada "Path" na seção de variáveis de ambiente
+--> Adicione à variável "Path" o caminho para a pasta flutter/bin.
+--> Reinicie o Windows
+--> Abra uma instância do PowerShell e digite o comando flutter e o help deve ser exibido
+
+--------------------------------
+
+No Linux
+
+1° Instale o git. Se usa o Synapyics (especializamente Ubuntu ou Debian), você pode rodar o comando apt-get install git-all
+
+2° O flutter só funciona em sistemas operacionais de 64 bits.
+
+3° Baixe a última versão do Flutter SDK para linux no link a seguir "https://flutter.io/setup-linux/". 
+
+4° Extraia o Flutter SDK em uma pasta com o nome de "development" e o recomendável é mantê-la na raiz de seu usuários.
+
+5° Adicione o Flutter às variáveis de ambiente com o comando export PATH=pwd/flutter/bin:$PATH em uma instância do termninal. Os passos para adicionar o Flutter no Path podem ser acompanhados neste link "https://flutter.io/setup-linux/#update-your-path". 
+
+6° Rode o comando flutter no terminal e o help do cli deve ser exibido. 
+
+----------------------------------
+
+MacOS
+
+1° Instale o git. A instalação pode ser feita através do Homebrew (com o comando brew install git) ou de um instalador tradicional (que pode ser obtido em "http://sourceforge.net/projects/git-osx-installer/")
+
+2° Baixe o Flutter SDK para MacOS no seguinte link "https://flutter.io/setup-macos/". 
+
+3° Extraia o Flutter SDK para uma pasta com nome de "development" e o recomendável manter os arquivos na raiz de seus usuários. 
+
+4° Atualize o PATH da máquina para que possa apontar ao Flutter SDK. Rode com o seguinte comando "PATH=pwd/flutter/bin:$PATH" em uma instância do Terminal. Pode ser os passos deste link "https://flutter.io/setup-macos/#update-your-path" para atualizar o PATH. 
+
+5° Rode o comando flutter no terminal e o help do Flutter CLI deve ser exibido.
+
+
+
+
+

@@ -1,0 +1,7 @@
+flutter create app_first
+--> cria um projeto flutter com o nome "app_first"
+
+Obs.: O flutter não aceita hífens no nomes de projetos. Troque hífen por underline.
+
+
+--> Execute o Android Studio e crie uma novo projeto Flutter (New Flutter Project)

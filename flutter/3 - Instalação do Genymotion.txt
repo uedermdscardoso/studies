@@ -1,0 +1,30 @@
+Genymotion 
+Emulador para android
+
+No Windows 
+
+1° Baixe o instale o VirtualBox que está disponível neste link "https://www.virtualbox.org/wiki/Downloads" e essa instalação é necessária para executar o Genymotion. 
+
+2° Vá no site " https://www.genymotion.com/"
+
+3° Vá no menu Help > Genymotion Desktop > Fun Zone
+
+4° Clique no botão "Download Genymotion Personal Edition"
+
+5° Crie uma conta para ter acesso ao download e lembre-se que você precisará do e-mail e senha cadastrados após a abertura do Genymotion.
+
+-------------------
+
+No MaxOS, somente abrir o arquivo DMG e arrastar o arquivo para a pasta "Applications". 
+
+----------------
+
+No Linux
+
+1° Copie o arquivo BIN baixado para uma pasta desejada.
+
+2° Execute o comando "chmod +x <Pasta do Genymotion>/genymotion-<version>_<arch>.bin" para dar permissão de execução a ele.
+
+3° Rode os comandos " cd <Pasta do Genymotion> " e " ./genymotion-<version>_<arch>.bin -d <Genymotion installer path> "
+
+4° Rode os comandos "cd <Pasta do Genymotion>" e "./genymotion" para rodar o programa.

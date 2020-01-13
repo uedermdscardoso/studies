@@ -1,0 +1,26 @@
+
+Para a download e instalação do Android Studio
+
+https://developer.android.com/studio/ 
+
+No windows, somente abrir o executável e prosseguir com a instalação. 
+
+--------------
+
+No linux
+1° Extraia o arquivo em uma pasta próprias no caminho "/usr/local" (disponível somente ao usuário) ou "/opt/" (para usuários compartilhados)
+
+2° Navegue até a pasta onde o Android Studio foi descompactado.
+
+3° Navegue até a pasta "/bin", execute o arquivo studio.sh e o Android Studio deve ser inicializado. 
+
+4° Você também pode adicionar pasta de onde o Android Studio foi descompactado até a pasta /bin à variável PATH. Desse modo, você não precisará navegar sempre até a pasta. 
+
+
+---------------
+
+No MacOS
+
+1° Abra o arquivo DMG que foi baixado
+2° Arraste o Android Studio para dentro da pasta chamada de "Applications"
+3° Execute o Android Studio. 

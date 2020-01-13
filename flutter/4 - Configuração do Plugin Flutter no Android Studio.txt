@@ -1,0 +1,9 @@
+1° Abra o Android Studio
+
+2° Abra o Gerenciador de Plugins em File > Settings > Plugins (No Windows ou Linux) ou Preferences > Plugins (no MacOS) 
+
+3° Clique em "Browse Repositories...", selecione o plugin do Flutter e instale. 
+
+4° Confirme a instalação do Dart também. 
+
+5 - Reinicializa o Android Studio após a instalação do plugin. 

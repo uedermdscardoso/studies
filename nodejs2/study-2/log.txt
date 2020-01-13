@@ -1,0 +1,12 @@
+
+Disparando www.google.com [172.217.29.228] com 32 bytes de dados:
+Resposta de 172.217.29.228: bytes=32 tempo=12ms TTL=54
+Resposta de 172.217.29.228: bytes=32 tempo=12ms TTL=54
+Resposta de 172.217.29.228: bytes=32 tempo=16ms TTL=54
+Resposta de 172.217.29.228: bytes=32 tempo=12ms TTL=54
+
+Estat¡sticas do Ping para 172.217.29.228:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um n£mero redondo de vezes em milissegundos:
+    M¡nimo = 12ms, M ximo = 16ms, M‚dia = 13ms

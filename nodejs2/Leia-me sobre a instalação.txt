@@ -1,0 +1,33 @@
+
+Link para fazer download o nodejs
+https://nodejs.org/en/download/
+
+Para Windows, faça download o arquivo .msi
+
+Para Linux, execute esses comandos: 
+ --> wget -qO- https://deb.nodesource.com/setup_11.x | sudo bash -
+ --> sudo apt-get install --yes nodejs
+
+Para Max Os X, faça download do arquivo .pkg. 
+
+
+-------------------------------
+Mais informações
+
+Pode-se criar aplicações desktop com Node.JS. Estas normalmente utilizam Chromium, um navegador de código aberto que está por trás do Google Chrome, e o Node.js. 
+
+As telas são feitas com HTML5 e CSS3, e o JavaScript pode se comunicar direamente com Nodejs, que embutido na aplicação.
+
+Atualmente o framework mais utilizado para criação de aplicações desktop é o electron, que criado pela equipe do GitHub. Já foram desenvolvidos os projetos como Atom, Slack e o Visual Studio Code.
+
+http://electron.atom.io/
+
+Existe um sistema operacional baseado no Node.js, escrito apenas com JavaScript que é o NodeOS. Qualquer pacote do npm é um pacote do NodeOS o qual com mais de 240 mil pacotes. Qualquer pode criar pacotes o NodeOS.
+
+http://node-os.com/
+
+Node.JS também é possível controler hardware e fazer comunicação de mais baixo nível usando o framework Noduino para acessar os controles básicos do Arduino a partir de aplicações web usando HTML5, Socket.io e NodeJS.
+Há projetos Tessel, Cylon.js. O primeiro pode comprar as placas para montar o seu próprio produto. O último é mais voltado para robótica, computação física e internet das coisas.
+
+http://sbstjn.github.io/noduino/, https://tessel.io/ e https://cylonjs.com/
+

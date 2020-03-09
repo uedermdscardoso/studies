@@ -1,0 +1,81 @@
+<!-- Acessa o objeto do tipo ngForm -->
+<!-- ngModel indica que esse campo faz parte do formulário -->
+<!--<form #myForm="ngForm" (submit)="onSubmit(myForm)">
+  <label>
+    <p>Nome</p>
+    <input type="text" name="nome" ngModel />
+  </label>
+  <label>
+    <p>Idade</p>
+    <input type="text" name="idade" ngModel />
+  </label>
+  <label>
+    <p>E-mail</p>
+    <input type="email" name="email" ngModel />
+  </label>
+  <label>
+    <p>Confirmar E-mail</p>
+    <input type="email" name="confirmaEmail" ngModel />
+  </label>
+  <button type="submit">Enviar</button>
+</form>-->
+
+<!--Com two way data binding e validação -->
+<!-- class pristine indica que não foi alterado pelo usuário, class touched porque já encostou e class dirty já alterou o valor -->
+<form #myForm="ngForm" (submit)="onSubmit(myForm)">
+    <div ngModelGroup="info"> <!-- agrupamento de elementos -->
+      <label>
+          <p>Nome</p>
+          <input #elNome="ngModel" type="text" name="nome" required minlength="3" maxlength="5" [(ngModel)]="info.nome" />
+          {{ info.nome }}
+          <ul *ngIf="elNome.dirty && elNome.invalid">
+            <li *ngIf="elNome.errors?.required">Campo é obrigatório</li>
+            <li *ngIf="elNome.errors?.minlength">Nome muito curto</li>
+            <li *ngIf="elNome.errors?.maxlength">Nome muito grande</li>
+          </ul>
+        </label>
+        <label>
+          <p>Idade</p>
+          <input type="text" name="idade" [(ngModel)]="info.idade" [disabled]="elNome.invalid" />
+        </label>
+        <label>
+          <p>E-mail</p>
+          <input type="email" name="email" email [(ngModel)]="info.email" />
+        </label>
+        <label>
+          <p>Confirmar E-mail</p>
+          <input type="email" name="confirmaEmail" email [(ngModel)]="info.confirmaEmail" />
+        </label>
+    </div>
+    <div ngModelGroup="endereco">
+      <label>
+        <p>CEP</p>
+        <input type="text" name="cep" ngModel #cep (blur)="getAddress(cep.value)" />
+      </label>
+      <label>
+        <p>Endereço</p>
+        <input type="text" name="logradouro" ngModel />
+      </label>
+      <label>
+        <p>Número</p>
+        <input type="text" name="numero" ngModel />
+      </label>
+      <label>
+        <p>Complemento</p>
+        <input type="text" name="complemento" ngModel />
+      </label>
+      <label>
+        <p>Bairro</p>
+        <input type="text" name="bairro" ngModel />
+      </label>
+      <label>
+        <p>Cidade</p>
+        <input type="text" name="cidade" ngModel />
+      </label>
+      <label>
+        <p>Estado</p>
+        <input type="text" name="uf" ngModel />
+      </label>
+    </div>
+    <button type="submit">Enviar</button>
+  </form>

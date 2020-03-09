@@ -1,0 +1,5 @@
+- e2e - Para testes endToEnd
+- node_modules - dependências do projeto
+- src - arquivos utilizados no projeto
+- tsconfig - configuração do typescript
+- tslint - configurações do lint

@@ -1,0 +1,94 @@
+
+<p>Exibindo componente</p>
+<router-outlet></router-outlet>
+<hr />
+
+<!--<router-outlet></router-outlet>-->
+<!--<app-criando-componente></app-criando-componente>-->
+
+<!-- name é um input property -->
+<!-- Enviar dados do nosso componente - name, [className] -->
+<app-example-three [(nameTest)]="title" name="abc" [className]="title" (myClick)="handleClick($event)"></app-example-three>
+
+<!-- Com two way data binding - @Input @Output, você exibe dentro do componente e pra fora-->
+------- {{ title }} --------
+
+<!-- Outro exemplo -->
+<hr />
+<p>Outro exemplo</p>
+<app-example-four></app-example-four>
+
+
+<!-- Outro exemplo -->
+<hr />
+<p>Outro exemplo</p>
+<app-example-five></app-example-five>
+
+<!-- Outro exemplo -->
+<hr />
+<p>Outro exemplo - Singular ngContent</p>
+<app-example-six>
+    <div>
+        <button>Click here</button>
+    </div>
+</app-example-six>
+
+
+<!-- Outro exemplo -->
+<hr />
+<p>Outro exemplo - Múltiplos ngContents</p>
+<app-example-seven>
+    <div class="header">Header</div>
+    <div class="footer">Footer</div>
+</app-example-seven>
+
+<!-- Outro exemplo -->
+<hr />
+<p>Outro exemplo</p>
+<app-example-eight></app-example-eight>
+
+<!-- Outro exemplo -->
+<hr />
+<p>Outro exemplo</p>
+<app-example-nine></app-example-nine>
+
+<!-- Outro exemplo -->
+<hr />
+<p>Outro exemplo</p>
+<app-example-ten></app-example-ten>
+
+<!-- Outro exemplo -->
+<hr />
+<p>Outro exemplo</p>
+<app-example-eleven></app-example-eleven>
+
+<!-- Outro exemplo -->
+<hr />
+<p>Outro exemplo</p>
+<app-example-twelve></app-example-twelve>
+
+<!-- Outro exemplo -->
+<hr />
+<p>Outro exemplo</p>
+<app-example-thirteen></app-example-thirteen>
+
+<!-- Outro exemplo -->
+<hr />
+<p>Outro exemplo</p>
+<app-example-fourteen></app-example-fourteen>
+
+
+<!-- Outro exemplo -->
+<hr />
+<p>Outro exemplo</p>
+<app-data-driven></app-data-driven>
+
+<!-- Outro exemplo -->
+<hr />
+<p>Outro exemplo</p>
+<app-example-sixteen></app-example-sixteen>
+
+<!-- Internalização -->
+<hr />
+<p>Internalização</p>
+<app-example-seventeen></app-example-seventeen>

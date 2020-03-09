@@ -1,0 +1,15 @@
+<select (change)="1" #myClass>
+    <option value="1">Classe 1</option>
+    <option value="2">Classe 2</option>
+    <option value="3">Classe 3</option>
+</select>
+<div
+    [ngClass]="{
+      classe1: (myClass.value == 1),
+      classe2: (myClass.value == 2),
+      classe3: (myClass.value == 3),
+      classeMaior: (myClass.value > 1)
+    }"
+>
+    My class
+</div>

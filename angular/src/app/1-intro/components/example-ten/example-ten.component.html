@@ -1,0 +1,13 @@
+<select (change)="1" #myClass>
+    <option value="1">Classe 1</option>
+    <option value="2">Classe 2</option>
+    <option value="3">Classe 3</option>
+</select>
+<div
+    [ngStyle]="{
+        display: (myClass.value == 2 ? 'none' : 'block'),
+        color: (myClass.value == 3 ? 'purple' : 'red')
+    }"
+>
+    My class
+</div>

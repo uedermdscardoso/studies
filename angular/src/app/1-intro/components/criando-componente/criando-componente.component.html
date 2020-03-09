@@ -1,0 +1,160 @@
+<!-- 
+    Criando projeto 
+    -- ng new meu-projeto
+    Criando componente automático
+    -- ng g c meu-componente
+
+    Usando interpolações 
+
+-->
+<p>
+    {{ title }} <br />
+    {{ title.toUpperCase() }} <br />
+    {{ 5 + 5 }} 
+</p>
+<hr />
+<p>
+    {{ person.name }}  <br />
+    Eu tenho um {{ person.materials[0].name }} <br />
+    {{ person ? person.idade : 'Idade não definida' }} <br />
+    {{ person?.materials[2]?.name }}
+</p>
+
+<hr />
+
+<!-- ngIF and else -->
+<!--* é um comando simplificado que está relacionado a templates. Substituto da tag template --> 
+<!-- ngIf é uma diretiva -->
+<p *ngIf="isVisible; else conditionFalse">
+    is visibilidade 1
+</p>
+<ng-template #conditionFalse>
+    <p>Outro texto</p>
+</ng-template>
+
+<hr />
+
+<!-- [ngIf] template faz parte do html -->
+<!-- <template [ngIf]="isVisible">
+    <p>{{ person?.materials[0]?.name }}</p>
+</template>
+<p template="ngIf isVisible">
+    {{ person?.materials[0]?.name }}
+</p> -->
+    
+
+<hr />
+
+<!-- ngSwitch -->
+<div [ngSwitch]="myValue">
+    <span *ngSwitchCase="1">Value 1</span>
+    <span *ngSwitchCase="2">Value 2</span>
+    <span *ngSwitchCase="3">Value 3</span>
+    <span *ngSwitchCase="">Default Value</span>
+</div>
+
+<hr />
+
+<!-- ngFor -->
+<div *ngFor="let item of items">
+    <p>{{ item.name }}</p>
+</div>
+
+<hr />
+
+<!-- 
+    Trabalhando com data binding 
+    -- data binding é a ligação entre o template e o componente
+-->
+<!--
+    {{ name }} - Interpolação
+        -- Binding unidirecional porque vai do componente ao template
+        -- É alterado o valor no template quando é modificado o valor no componente
+    [] - Property binding 
+        -- Outra de enviar valores do componente ao template. Para as propriedades de um elemento
+-->
+<img src="{{ image }}" /> <!-- Com interpolação -->
+<img [src]="image" /> <!-- Com property binding. [src] é um atalho para diretiva bind-src -->
+<img bind-src="image" />
+<br />
+
+<!--
+() - Event Binding 
+        -- Permite enviar eventos do template para o componente
+-->
+<button (click)="handleClick()">Click</button> <!-- Com Event Binding. É um atalho para a diretiva on-click -->
+<button on-click="handleClick()">Click</button>
+
+<hr />
+
+<!-- Two-way data binding -->
+<p>{{ name }}</p>
+<br />
+<p>Two-way data binding</p>
+<input type="text" [value]="name" (input)="name = $event.target.value" /> <!-- target - elemento alvo -->
+<br />
+<input type="text" [value]="name" (input)="name = MyName.value" #MyName /> 
+
+<br />
+
+<!-- Two-way data binding com ngModel -->
+<p>Two-way data binding com ngModel</p>
+<!--<input 
+    type="text" 
+    [ngModel]="name"
+    (ngModelChange)="name = $event" /> -->
+
+<!-- [()] - banana dentro de uma caixa -->
+<input type="text" [(ngModel)]="name" />  <!-- Simplificado para two-way data binding com NgModel -->
+
+<br />
+<hr />
+
+<!-- Class binding -->
+<select (change)="1" #myClass>
+    <option value="1">Classe 1</option>
+    <option value="2">Classe 2</option>
+    <option value="3">Classe 3</option>
+</select>
+<div
+    [class.classe1]="myClass.value == 1"
+    [class.classe2]="myClass.value == 2"
+    [class.classe3]="myClass.value == 3"
+    [class.classeMaior]="myClass.value > 1"
+>
+    My class
+</div>
+
+<br />
+<hr />
+
+<!-- style binding -->
+<div
+    [style.display]="myClass.value == 1 ? 'none' : 'block'">
+
+</div>
+
+<br />
+<hr />
+
+<!-- Usando Service -->
+<div>
+    <p *ngFor="let student of students">
+        {{ student.name }}
+    </p>
+</div>
+
+<br />
+<hr />
+
+<!-- Fazendo requisição -->
+<p><b>Requisitando a api do github... Procurando projetos a partir de um nome</b></p>
+<div>
+    <p *ngFor="let project of projects">
+        Nome: {{ project.full_name }}
+    </p>
+</div>
+
+<br />
+<hr />
+

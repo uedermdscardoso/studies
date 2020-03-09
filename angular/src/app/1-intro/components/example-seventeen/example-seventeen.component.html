@@ -1,0 +1,29 @@
+<!-- 
+  - Precisa importar registerLocaleData e localeBR
+  - registrar a linguagem por meio da função registerLocaleData()
+  - Definir um provider
+      providers: [
+        { provide: LOCALE_ID, useValue: 'pt'} //Define a language tag
+      ]
+-->
+<p>{{ 3545.32 | number }}</p>
+<p i18n-title="title do nome" title="my name" i18n="Nome do Usuário | Exibe o nome do usuário logado no sistema">Name</p> <!-- significado e a descrição -->
+<span i18n>
+  <!-- =0 { ninguem } - Exibe quando o valor armazenado na variável numeroPessoas é igual a zero -->
+  <!-- pluralização -->
+  Numero: { 
+    numeroPessoas, plural,
+    =0 { ninguem } 
+    =1 { {{ numeroPessoas }} pessoa }
+    other { {{ numeroPessoas }} pessoas }
+  }
+</span>
+
+<p i18n>
+  <!-- Selecionar texto -->
+  Animal: {
+    genero, select,
+    f { leoa }
+    m { leao }
+  }
+</p>

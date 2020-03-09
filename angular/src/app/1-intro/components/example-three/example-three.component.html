@@ -1,0 +1,11 @@
+<p>
+  {{ name }} <br />
+  {{ nameTest }}
+  {{ nomeExterno }}
+  <br />
+
+  <input type="text" [(ngModel)]="nameTest" (input)="onChangeNameTest()" /> <br /> <br />
+
+  <button (click)="callClick()">Click here</button> <!-- Testando @Output -->
+
+</p>

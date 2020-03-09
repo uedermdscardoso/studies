@@ -1,0 +1,19 @@
+<!-- btnState é o estado do botão -->
+<button class="my-button" [@btnState]="myState" (click)="toggleState()">
+    Click here
+</button>
+
+<!-- Aplicar efeito de abrir e fechar a lista -->
+<button (click)="toggleListState()">Open / Close</button>
+
+<!--<ul>
+    <li *ngFor="let item of myList; let i = index" (click)="removeItem(i)">
+        {{ item }}
+    </li>
+</ul>-->
+
+<ul [@listOpen]="myListState" (@listOpen.start)="animationStart($event)" (@listOpen.done)="animationEnd($event)" class="my-list">
+    <li @listState *ngFor="let item of myList; let i = index" (click)="removeItem(i)">
+        {{ item }}
+    </li>
+</ul>
